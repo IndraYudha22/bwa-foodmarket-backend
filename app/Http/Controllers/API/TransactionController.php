@@ -112,12 +112,12 @@ class TransactionController extends Controller
     //  * @param $id
     //  * @return \Illuminate\Http\JsonResponse
     //  */
-    // public function update(Request $request, $id)
-    // {
-    //     $transaction = Transaction::findOrFail($id);
+    public function update(Request $request, $id)
+    {
+        $transaction = Transaction::findOrFail($id);
 
-    //     $transaction->update($request->all());
+        $transaction->update($request->all());
 
-    //     return ResponseFormatter::success($transaction,'Transaksi berhasil diperbarui');
-    // }
+        return ResponseFormatter::success($transaction,'Transaksi berhasil diperbarui');
+    }
 }
